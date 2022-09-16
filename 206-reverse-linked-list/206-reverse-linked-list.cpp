@@ -21,16 +21,27 @@ public:
             return head;
         }
         
-     ListNode* head1=reverseList(head->next);
-        ListNode* temp=head1;
-        while(temp->next!=NULL)
-        {
-            temp=temp->next;
-        }
-        temp->next=head;
-        head->next=NULL;
-        return head1;
-     
+     // ListNode* head1=reverseList(head->next);
+     //    ListNode* temp=head1;
+     //    while(temp->next!=NULL)
+     //    {
+     //        temp=temp->next;
+     //    }
+     //    temp->next=head;
+     //    head->next=NULL;
+     //    return head1;
+      ListNode* prev=NULL;
+      ListNode* curr=head;
+       ListNode* next=head->next;  
+       while(next!=NULL)
+       {
+           curr->next=prev;
+           prev=curr;
+           curr=next;
+           next=next->next;
+       }
+        curr->next=prev;
+        return curr;
         
         
     }
