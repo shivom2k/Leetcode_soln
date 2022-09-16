@@ -19,7 +19,7 @@ public:
         }
         while(true)
         {
-          //  cout<<"heloo"<<endl;
+          // cout<<"heloo"<<endl;
             
             if(temp1==temp2)
             {
